@@ -63,25 +63,20 @@ h2{font-size:clamp(26px,3.4vw,36px);line-height:1.15;margin:0;text-transform:upp
 .steps li:before{content:counter(s,decimal-leading-zero);display:block;font-size:28px;font-weight:800;color:var(--y2);line-height:1}
 .steps b{display:block;margin-top:10px;font-size:17px}
 .steps span{display:block;color:var(--mute);font-size:14px;margin-top:4px}
-.objs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.objs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .obj{border:1px solid var(--line);background:#fff}
 .ph{aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#e2e8f0 0 14px,#f1f5f9 14px 28px);display:grid;place-items:center;color:var(--mute);font-size:14px;text-align:center}
 .ph svg{width:44px;height:44px;display:block;margin:0 auto 6px;color:#64748b}
 .obj div.t{padding:16px 18px 18px}
 .obj b{display:block;font-size:17px;line-height:1.35}
 .obj span{display:block;color:var(--mute);margin-top:4px}
-.cts{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.cts{max-width:880px}
 .box{background:#fff;border:1px solid var(--line);padding:28px}
 .box h3{margin:0 0 16px;font-size:20px;text-transform:uppercase;letter-spacing:.04em}
-.box dl{margin:0}
-.box dt{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin-top:18px}
-.box dt:first-child{margin-top:0}
+.box dl{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:20px 32px}
+.box dt{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);margin-top:0}
 .box dd{margin:4px 0 0;font-size:18px;overflow-wrap:anywhere}
 .box dd a{font-weight:700;text-decoration:none;border-bottom:2px solid var(--y)}
-.req{width:100%;border-collapse:collapse;font-size:15px}
-.req th,.req td{text-align:left;vertical-align:top;padding:9px 0;border-bottom:1px solid var(--line)}
-.req th{color:var(--mute);font-weight:400;width:38%;padding-right:12px}
-.req tr:last-child th,.req tr:last-child td{border-bottom:0}
 .ftr{background:var(--ink);color:#cbd5e1;padding:40px 0;font-size:14px;border-top:4px solid var(--y)}
 .ftr .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 .ftr a{color:#fff}
@@ -91,7 +86,7 @@ h2{font-size:clamp(26px,3.4vw,36px);line-height:1.15;margin:0;text-transform:upp
  .hero .wrap{grid-template-columns:minmax(0,1fr);padding-top:48px;padding-bottom:56px}
  .roof{max-width:440px}
  .svc,.objs{grid-template-columns:repeat(2,1fr)}
- .cts{grid-template-columns:minmax(0,1fr)}
+ .box dl{grid-template-columns:minmax(0,1fr)}
  .nav{display:none}
  section{padding:56px 0}
 }
@@ -101,8 +96,6 @@ h2{font-size:clamp(26px,3.4vw,36px);line-height:1.15;margin:0;text-transform:upp
  .svc,.objs,.steps{grid-template-columns:1fr}
  .svc div,.box{padding:22px}
  .btn{width:100%}
- .req th{width:auto;display:block;padding-bottom:0;border:0}
- .req td{display:block;padding-top:2px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -179,7 +172,6 @@ h2{font-size:clamp(26px,3.4vw,36px);line-height:1.15;margin:0;text-transform:upp
   <div class="head"><h2>Объекты</h2></div>
   <div class="objs">
    <div class="obj"><div class="ph" role="img" aria-label="Фотография объекта будет добавлена"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="6" width="18" height="14"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>Фото объекта</div></div><div class="t"><b>Кровля из сэндвич-панелей</b><span>ст. Гривенская</span></div></div>
-   <div class="obj"><div class="ph" role="img" aria-label="Фотография объекта будет добавлена"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="6" width="18" height="14"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>Фото объекта</div></div><div class="t"><b>Ремонт крыши</b><span>Баканка</span></div></div>
    <div class="obj"><div class="ph" role="img" aria-label="Фотография объекта будет добавлена"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="6" width="18" height="14"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>Фото объекта</div></div><div class="t"><b>Навес</b><span>ст. Черноерковская</span></div></div>
    <div class="obj"><div class="ph" role="img" aria-label="Фотография объекта будет добавлена"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="6" width="18" height="14"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>Фото объекта</div></div><div class="t"><b>Ремонт кровли склада</b><span>ст. Новониколаевская</span></div></div>
    <div class="obj"><div class="ph" role="img" aria-label="Фотография объекта будет добавлена"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="6" width="18" height="14"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>Фото объекта</div></div><div class="t"><b>Металлоконструкции</b><span>ст. Староминская</span></div></div>
@@ -194,23 +186,11 @@ h2{font-size:clamp(26px,3.4vw,36px);line-height:1.15;margin:0;text-transform:upp
    <div class="box">
     <h3>Связаться</h3>
     <dl>
-     <dt>Телефон</dt><dd><a href="tel:+78612033615">+7 (861) 203-36-15</a></dd>
-     <dt>E-mail</dt><dd><a href="mailto:expert.com.777@gmail.com">expert.com.777@gmail.com</a></dd>
-     <dt>Адрес</dt><dd>350051, Краснодарский край, г.&nbsp;Краснодар, ул.&nbsp;Гаражная, д.&nbsp;81/3, помещ.&nbsp;1109</dd>
-     <dt>Режим работы</dt><dd>Пн–Пт: 9:00–18:00</dd>
+     <div><dt>Телефон</dt><dd><a href="tel:+78612033615">+7 (861) 203-36-15</a></dd></div>
+     <div><dt>E-mail</dt><dd><a href="mailto:expert.com.777@gmail.com">expert.com.777@gmail.com</a></dd></div>
+     <div><dt>Адрес</dt><dd>350051, Краснодарский край, г.&nbsp;Краснодар, ул.&nbsp;Гаражная, д.&nbsp;81/3, помещ.&nbsp;1109</dd></div>
+     <div><dt>Режим работы</dt><dd>Пн–Пт: 9:00–18:00</dd></div>
     </dl>
-   </div>
-   <div class="box" id="requisites">
-    <h3>Реквизиты</h3>
-    <table class="req">
-     <tr><th scope="row">Полное наименование</th><td>Общество с ограниченной ответственностью «ЭКСПЕРТ»</td></tr>
-     <tr><th scope="row">Сокращённое наименование</th><td>ООО «ЭКСПЕРТ»</td></tr>
-     <tr><th scope="row">ИНН</th><td>2308236556</td></tr>
-     <tr><th scope="row">КПП</th><td>230801001</td></tr>
-     <tr><th scope="row">ОГРН</th><td>1162375038341</td></tr>
-     <tr><th scope="row">Юридический адрес</th><td>350051, Краснодарский край, г.&nbsp;Краснодар, ул.&nbsp;Гаражная, д.&nbsp;81/3, помещ.&nbsp;1109</td></tr>
-     <tr><th scope="row">Руководитель</th><td>Директор — Жлобенцева Юлия Николаевна</td></tr>
-    </table>
    </div>
   </div>
  </div>
